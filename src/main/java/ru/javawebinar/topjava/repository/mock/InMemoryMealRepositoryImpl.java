@@ -50,7 +50,7 @@ public class InMemoryMealRepositoryImpl implements MealRepository {
     public Meal get(int id, int userId) {
         Optional<Meal> currentMeal = Optional.of(repository.get(id));
         if (currentMeal.isPresent()) {
-            if (currentMeal.get().getId() == userId)
+            if (currentMeal.get().getUserId() == userId)
                 return currentMeal.get();
         }
         return null;
