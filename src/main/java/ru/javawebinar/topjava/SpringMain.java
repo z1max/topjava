@@ -26,20 +26,6 @@ public class SpringMain {
 
             System.out.println(admin);
             System.out.println(user);
-
-            Meal meal1 = new Meal(null, LocalDateTime.now(), "meal 1", 500);
-            Meal meal2 = new Meal(null, LocalDateTime.now(), "meal 2", 700);
-            mealRestController.create(meal1);
-            mealRestController.create(meal2);
-
-            System.out.println(meal1);
-            System.out.println(meal2);
-
-            System.out.println(mealRestController.getAll());
-
-            AuthorizedUser.setId(2);
-
-            mealRestController.delete(7);
         }
     }
 }
