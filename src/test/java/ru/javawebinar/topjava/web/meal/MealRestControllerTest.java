@@ -83,7 +83,7 @@ public class MealRestControllerTest extends AbstractControllerTest {
 
     @Test
     public void testGetBetween() throws Exception {
-        mockMvc.perform(get(REST_URL + "between?start=" + START_DATE + "&end=" + END_DATE))
+        mockMvc.perform(get(REST_URL + "filter?start=" + START_DATE + "&end=" + END_DATE))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
